@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Tip Time</string>
+    <string name="service_cost_hint_edit_text_label">Cost of Service?</string>
+    <string name="service_rate_text_view_label">How was the service?</string>
+    <string name="amazing_service_radio_button_label">Amazing!</string>
+    <string name="good_service_radio_button_label">Good!</string>
+    <string name="ok_service_radio_button_label">Regular</string>
+    <string name="bad_service_radio_button_label">Bad :(</string>
+    <string name="round_tip_toggle_button_label">Round the Tip?</string>
+    <string name="calculate_tip_button_label">CALCULATE</string>
+    <string name="tip_result_text_view_label">Tip Amount:</string>
+    <string name="country_select_text_view_label">Choose your Country!</string>
+    <string name="number_of_people_edit_text_hint">Number Of People?</string>
+    <string name="tip_people_result_text_view_labele">Tip Amount per Person:</string>
+
+    <string name="toast_empty_fields_message">The fields can\'t be empty</string>
+    <string name="toast_no_number_field_message">The fields can be only numbers</string>
+
+    <string-array name="county_spinner_options">
+        <item>Canada</item>
+        <item>USA</item>
+        <item>Mexico</item>
+        <item>Japan</item>
+        <item>Russia</item>
+    </string-array>
+
+</resources>
