@@ -24,37 +24,78 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"/>
 
+            <ImageView
+                android:id="@+id/countryImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_add_location"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/countrySelectorSpinner"
+                app:layout_constraintTop_toTopOf="@+id/countrySelectorSpinner"
+                app:layout_constraintBottom_toBottomOf="@+id/countrySelectorSpinner"/>
+
             <Spinner
                 android:id="@+id/countrySelectorSpinner"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="25dp"
                 android:background="@drawable/rounded_gray_rectangle"
                 android:minHeight="25dp"
-                android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
+                android:drawableEnd="@drawable/ic_baseline_arrow_drop_24"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/countryImageView"
                 app:layout_constraintTop_toBottomOf="@+id/countrySelectTextView" />
 
-            <EditText
+            <ImageView
+                android:id="@+id/serviceCostImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_store"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/serviceCostEditText"
+                app:layout_constraintTop_toTopOf="@+id/serviceCostEditText"
+                app:layout_constraintBottom_toBottomOf="@+id/serviceCostEditText"/>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/serviceCostEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/service_cost_hint_edit_text_label"
                 android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="10dp"
                 android:layout_marginEnd="16dp"
                 android:action="next"
-                android:maxLines="1"
-                android:inputType="number"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:layout_constraintTop_toBottomOf="@+id/countrySelectorSpinner"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintStart_toEndOf="@+id/serviceCostImageView"
+                app:layout_constraintEnd_toEndOf="parent">
 
-            <EditText
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/costInputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/numPeopleImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_people"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/numPeopleEditText"
+                app:layout_constraintTop_toTopOf="@+id/numPeopleEditText"
+                app:layout_constraintBottom_toBottomOf="@+id/numPeopleEditText"/>
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/numPeopleEditText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -63,11 +104,30 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
                 android:action="finish"
-                android:maxLines="1"
-                android:inputType="number"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:layout_constraintTop_toBottomOf="@+id/serviceCostEditText"
+                app:layout_constraintStart_toEndOf="@+id/numPeopleImageView"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numPeopleInputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:inputType="number"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/serviceRateImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_favorite"
+                android:layout_marginStart="16dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintEnd_toStartOf="@+id/serviceRateTextView"
+                app:layout_constraintTop_toTopOf="@+id/serviceRateTextView"
+                app:layout_constraintBottom_toBottomOf="@+id/serviceRateTextView"/>
 
             <TextView
                 android:id="@+id/serviceRateTextView"
@@ -76,9 +136,9 @@
                 android:text="@string/service_rate_text_view_label"
                 android:textSize="12sp"
                 android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="10dp"
                 app:layout_constraintTop_toBottomOf="@+id/numPeopleEditText"
-                app:layout_constraintStart_toStartOf="parent"/>
+                app:layout_constraintStart_toEndOf="@+id/serviceCostImageView"/>
 
             <RadioGroup
                 android:id="@+id/tipOptions"
@@ -86,9 +146,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginStart="16dp"
-                app:layout_constraintTop_toBottomOf="@id/serviceRateTextView"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/serviceRateImageView"
+                app:layout_constraintStart_toStartOf="@+id/serviceRateImageView"
                 android:orientation="vertical">
 
                 <RadioButton
@@ -117,17 +176,28 @@
 
             </RadioGroup>
 
-            <Switch
+            <ImageView
+                android:id="@+id/tipImageView"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_store"
+                android:layout_marginStart="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/roundTipSwitch"
+                app:layout_constraintTop_toTopOf="@+id/roundTipSwitch"
+                app:layout_constraintBottom_toBottomOf="@+id/roundTipSwitch"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
                 android:id="@+id/roundTipSwitch"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:checked="true"
                 android:text="@string/round_tip_toggle_button_label"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginStart="25dp"
                 android:layout_marginEnd="25dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tipImageView"
                 app:layout_constraintTop_toBottomOf="@id/tipOptions" />
 
             <Button

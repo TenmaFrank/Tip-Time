@@ -34,8 +34,8 @@ class MainActivity : AppCompatActivity() {
 
         binding.calculateButton.setOnClickListener {
             var result = 0.0
-            val serviceCost = binding.serviceCostEditText.text.toString()
-            val numPeople = binding.numPeopleEditText.text.toString()
+            val serviceCost = binding.costInputText.text.toString()
+            val numPeople = binding.numPeopleInputText.text.toString()
             val roundedTip = binding.roundTipSwitch.isChecked
 
             var tipPersentage = when(binding.tipOptions.checkedRadioButtonId){
