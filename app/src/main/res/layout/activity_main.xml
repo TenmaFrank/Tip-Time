@@ -19,7 +19,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/country_select_text_view_label"
                 android:textSize="12sp"
-                android:textColor="@color/black"
                 android:layout_marginTop="16dp"
                 android:layout_marginStart="16dp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -36,7 +35,6 @@
                 android:minHeight="25dp"
                 android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"
                 android:textSize="12sp"
-                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/countrySelectTextView" />
@@ -77,7 +75,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/service_rate_text_view_label"
                 android:textSize="12sp"
-                android:textColor="@color/black"
                 android:layout_marginTop="16dp"
                 android:layout_marginStart="16dp"
                 app:layout_constraintTop_toBottomOf="@+id/numPeopleEditText"
@@ -173,7 +170,6 @@
                 android:layout_marginTop="8dp"
                 android:text="---"
                 android:textSize="25sp"
-                android:textColor="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/tipPersonResultTexView"
                 app:layout_constraintStart_toStartOf="@+id/tipPersonResultTexView"/>
 
@@ -184,7 +180,6 @@
                 android:layout_marginTop="8dp"
                 android:text="---"
                 android:textSize="25sp"
-                android:textColor="@color/black"
                 app:layout_constraintTop_toBottomOf="@+id/tipResultTexView"
                 app:layout_constraintEnd_toEndOf="@+id/tipResultTexView"/>
 
